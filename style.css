@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    
+    
+}
+.getBody{
+    background-color: rgb(28, 27, 27);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #222B3A;
+    color: white;
+    box-shadow:  1px 2px 5px 1px black;
+}
+.header div{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 16px;
+	width: 32px;
+	transform: scale(1.5);
+}
+
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 12px;
+	width: 12px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(16px);
+}
+
+
+.fa-moon {
+	color: #f1c40f;
+}
+
+.fa-sun {
+	color: #f39c12;
+}
+
+.header h1,
+.header h5{
+    margin: 0 20px;
+}
+.header div h5{
+    padding: 5px 10px;
+    background-color: #444;
+    cursor:pointer;
+    border-radius: 20px;
+    transition: transform 0.3s;
+}
+.header h5:active{
+    transform: translateY(3px);
+}
+.formm{
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    background-color: rgba(10, 10, 10, 0.9);
+    visibility:hidden;
+    z-index: 2;
+    transition: all 0.3s;
+
+}
+.getForm{
+    height: 100vh;
+    visibility: visible;
+    opacity: 1;
+}
+.formm .err{
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.getErr{
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+.formm .err h1{
+    font-size: 1.3rem;
+    background-color: #222B3A;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 5px;
+    color:white;
+}
+.formm .err p{
+    padding: 5px;
+    font-size: .85rem;
+}
+
+.form{
+    position: fixed;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.form input{
+    border: none;
+    outline: none;
+    border-bottom:  1px solid #222B3A;
+    margin: 3px 0 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #333;
+}
+.form h2{
+    background-color: #222B3A;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.form .btns{
+    text-align: center;
+}
+.form .btns button{
+    border: none;
+    outline: none;
+    padding: 7px 10px;
+    background-color: #222B3A;
+    color: white;
+    width: 40%;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.form .btns button:active{
+    transform: translateY(3px);
+}
+.movies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    height: 85vh;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.movie{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 240px;
+    width: 130px;
+    box-shadow: 0 2px 5px #222B3A;
+    background-color: #222B3A;
+    border-radius: 15px;
+}
+.movie div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.movie div button{
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    background-color: #444;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.movie div span{
+    font-size: .8rem;
+}
+.movie img{
+    width: 100%;
+    height: 68%;
+    object-fit: cover;
+    border-radius: 10px;
+}
